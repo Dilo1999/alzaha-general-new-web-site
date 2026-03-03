@@ -46,7 +46,7 @@
         </div>
         <x-container class="relative z-10 px-8">
             <div class="animate-now" data-animate="fadeInUp">
-                <h1 class="text-white text-5xl md:text-7xl font-bold mb-0 max-w-4xl mx-auto leading-[1.1]">
+                <h1 class="text-white font-bold mb-0 max-w-4xl mx-auto leading-[1.1]" style="font-size: 32.4px;">
                     A simple system from sourcing to delivery
                 </h1>
             </div>
@@ -76,15 +76,15 @@
                                 <svg class="w-6 h-6 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h13l5 5-5 5H3V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12h.01"/></svg>
                             @endif
                         </div>
-                        <span class="text-xl font-bold tracking-widest uppercase text-[#c19b46]">{{ $step['number'] }}</span>
+                        <span class="font-bold tracking-widest uppercase text-[#c19b46]" style="font-size: 18px;">{{ $step['number'] }}</span>
                     </div>
 
-                    <h2 class="text-4xl mb-2 leading-tight font-medium text-[#6d5a2c]">{{ $step['title'] }}</h2>
-                    <p class="text-xl mb-8 font-medium italic opacity-60 text-[#6d5a2c]">{{ $step['subtitle'] }}</p>
+                    <h2 class="mb-2 leading-tight font-medium text-[#6d5a2c]" style="font-size: 27px;">{{ $step['title'] }}</h2>
+                    <p class="mb-8 font-medium italic opacity-60 text-[#6d5a2c]" style="font-size: 16.2px;">{{ $step['subtitle'] }}</p>
 
                     <div class="max-w-[540px]">
-                        <p class="text-lg leading-relaxed opacity-90 mb-10 text-[#6d5a2c]">{{ $step['description'] }}</p>
-                        <a href="{{ route('quote') }}" class="group flex items-center gap-2 px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]">
+                        <p class="leading-relaxed opacity-90 mb-10 text-[#6d5a2c]" style="font-size: 14.4px;">{{ $step['description'] }}</p>
+                        <a href="{{ route('quote') }}" class="group flex items-center gap-2 px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]" style="font-size: 14.4px;">
                             Get Started
                             <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
@@ -99,7 +99,7 @@
     <section class="py-[140px] bg-[#f7f4eb]">
         <x-container class="px-8">
             <div class="animate-on-scroll" data-animate="fadeInUp">
-                <h2 class="text-center text-4xl mb-16 font-medium text-[#6d5a2c]">
+                <h2 class="text-center mb-16 font-medium text-[#6d5a2c]" style="font-size: 27px;">
                     What Makes Al Zaha Different
                 </h2>
             </div>
@@ -118,8 +118,8 @@
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                             @endif
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-[#6d5a2c]">{{ $benefit['title'] }}</h3>
-                        <p class="opacity-70 leading-relaxed text-[#6d5a2c]">{{ $benefit['description'] }}</p>
+                        <h3 class="font-bold mb-4 text-[#6d5a2c]" style="font-size: 18px;">{{ $benefit['title'] }}</h3>
+                        <p class="opacity-70 leading-relaxed text-[#6d5a2c]" style="font-size: 14.4px;">{{ $benefit['description'] }}</p>
                     </div>
                 @endforeach
             </div>
@@ -130,15 +130,15 @@
     <section class="py-[140px] text-center bg-[#6d5a2c]">
         <x-container class="px-8">
             <div class="animate-on-scroll" data-animate="fadeInUp">
-                <h2 class="text-white text-5xl mb-8 font-medium">Ready to Operate With Structured Control?</h2>
-                <p class="text-white/80 text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                <h2 class="text-white mb-8 font-medium" style="font-size: 27px;">Ready to Operate With Structured Control?</h2>
+                <p class="text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed" style="font-size: 16.2px;">
                     Experience a sourcing system designed for operational reliability. Let's discuss your specific project requirements.
                 </p>
                 <div class="flex flex-wrap gap-6 justify-center">
-                    <a href="{{ route('quote') }}" class="px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl cursor-pointer text-lg bg-[#c19b46]">
+                    <a href="{{ route('quote') }}" class="px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl cursor-pointer bg-[#c19b46]" style="font-size: 16.2px;">
                         Request a Quote
                     </a>
-                    <a href="{{ route('contact') }}" class="px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full border-2 border-[#c19b46] hover:bg-white/5 cursor-pointer text-lg">
+                    <a href="{{ route('contact') }}" class="px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full border-2 border-[#c19b46] hover:bg-white/5 cursor-pointer" style="font-size: 16.2px;">
                         Talk to a Coordinator
                     </a>
                 </div>

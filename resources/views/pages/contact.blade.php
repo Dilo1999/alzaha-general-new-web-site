@@ -7,8 +7,8 @@
     <section class="py-20 md:py-[120px] text-center border-b border-[#6d5a2c]/5">
         <x-container>
             <div class="animate-now" data-animate="fadeInUp">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl mb-6 font-bold text-[#6d5a2c]">Get in Touch</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto opacity-80 text-[#6d5a2c]">
+                <h1 class="mb-6 font-bold text-[#6d5a2c]" style="font-size: 27px;">Get in Touch</h1>
+                <p class="max-w-2xl mx-auto opacity-80 text-[#6d5a2c]" style="font-size: 16.2px;">
                 We're here to discuss your industrial challenges. Visit our Dubai headquarters or reach out via phone or email.
                 </p>
             </div>
@@ -19,7 +19,7 @@
         <x-container>
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
                 <div class="flex-1 animate-on-scroll" data-animate="slideLeft">
-                    <h2 class="text-3xl md:text-4xl mb-8 md:mb-12 leading-tight font-bold text-[#6d5a2c]">Connect with Al Zaha</h2>
+                    <h2 class="mb-8 md:mb-12 leading-tight font-bold text-[#6d5a2c]" style="font-size: 27px;">Connect with Al Zaha</h2>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8 md:gap-12">
                         <div class="flex gap-4 md:gap-6">
@@ -27,8 +27,8 @@
                                 <svg class="text-white w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-lg md:text-xl font-bold mb-2 text-[#6d5a2c]">Our Headquarters</h4>
-                                <p class="text-sm md:text-lg opacity-70 leading-relaxed text-[#6d5a2c]">
+                                <h4 class="font-bold mb-2 text-[#6d5a2c]" style="font-size: 16.2px;">Our Headquarters</h4>
+                                <p class="opacity-70 leading-relaxed text-[#6d5a2c]" style="font-size: 14.4px;">
                                     18B street, Umm Ramool-215,<br>
                                     Al Rashidiya, Dubai
                                 </p>
@@ -40,8 +40,8 @@
                                 <svg class="text-white w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-lg md:text-xl font-bold mb-2 text-[#6d5a2c]">Phone</h4>
-                                <p class="text-sm md:text-lg opacity-70 leading-relaxed text-[#6d5a2c]">
+                                <h4 class="font-bold mb-2 text-[#6d5a2c]" style="font-size: 16.2px;">Phone</h4>
+                                <p class="opacity-70 leading-relaxed text-[#6d5a2c]" style="font-size: 14.4px;">
                                     Main Office: +971 04 396 7075
                                 </p>
                             </div>
@@ -52,8 +52,8 @@
                                 <svg class="text-white w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-lg md:text-xl font-bold mb-2 text-[#6d5a2c]">Email Inquiries</h4>
-                                <p class="text-sm md:text-lg opacity-70 leading-relaxed text-[#6d5a2c]">
+                                <h4 class="font-bold mb-2 text-[#6d5a2c]" style="font-size: 16.2px;">Email Inquiries</h4>
+                                <p class="opacity-70 leading-relaxed text-[#6d5a2c]" style="font-size: 14.4px;">
                                     General: sales@alzahageneraltrading.com<br>
                                     Quotes: info@alzahageneraltrading.com
                                 </p>
@@ -65,8 +65,8 @@
                                 <svg class="text-white w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             </div>
                             <div>
-                                <h4 class="text-lg md:text-xl font-bold mb-2 text-[#6d5a2c]">Business Hours</h4>
-                                <p class="text-sm md:text-lg opacity-70 leading-relaxed text-[#6d5a2c]">
+                                <h4 class="font-bold mb-2 text-[#6d5a2c]" style="font-size: 16.2px;">Business Hours</h4>
+                                <p class="opacity-70 leading-relaxed text-[#6d5a2c]" style="font-size: 14.4px;">
                                     Monday – Friday: 9:00 AM – 6:00 PM<br>
                                     Saturday: 10:00 AM – 2:00 PM
                                 </p>
@@ -100,8 +100,8 @@
             <div class="flex items-start gap-3">
                 <svg class="w-8 h-8 flex-shrink-0 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                 <div>
-                    <h3 class="text-base md:text-lg font-bold text-[#6d5a2c]">Dubai Business Bay</h3>
-                    <p class="text-sm opacity-80 text-[#6d5a2c]">Prism Tower, Level 15</p>
+                    <h3 class="font-bold text-[#6d5a2c]" style="font-size: 16.2px;">Dubai Business Bay</h3>
+                    <p class="opacity-80 text-[#6d5a2c]" style="font-size: 14.4px;">Prism Tower, Level 15</p>
                 </div>
             </div>
         </div>

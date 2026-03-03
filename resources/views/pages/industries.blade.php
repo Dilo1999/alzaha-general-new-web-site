@@ -41,7 +41,7 @@
 
         <x-container class="relative z-10 px-8">
             <div class="animate-now" data-animate="fadeInUp">
-                <h1 class="text-white text-5xl md:text-7xl font-bold mb-0 max-w-4xl mx-auto leading-[1.1]">
+                <h1 class="text-white font-bold mb-0 max-w-4xl mx-auto leading-[1.1]" style="font-size: 32.4px;">
                     Supply chain solutions built for operational industries
                 </h1>
             </div>
@@ -62,17 +62,17 @@
 
                 {{-- Text side --}}
                 <div class="flex-1 animate-on-scroll" data-animate="fadeInUp">
-                    <h2 class="text-4xl mb-8 leading-tight font-medium text-[#6d5a2c]">{{ $item['title'] }}</h2>
+                    <h2 class="mb-8 leading-tight font-medium text-[#6d5a2c]" style="font-size: 27px;">{{ $item['title'] }}</h2>
                     <div class="max-w-[540px]">
                         <div class="mb-8">
-                            <h4 class="text-sm font-bold uppercase tracking-widest mb-4 text-[#c19b46]">The Challenge</h4>
-                            <p class="text-lg leading-relaxed opacity-90 text-[#6d5a2c]">{{ $item['pain'] }}</p>
+                            <h4 class="font-bold uppercase tracking-widest mb-4 text-[#c19b46]" style="font-size: 12.6px;">The Challenge</h4>
+                            <p class="leading-relaxed opacity-90 text-[#6d5a2c]" style="font-size: 14.4px;">{{ $item['pain'] }}</p>
                         </div>
                         <div class="mb-10">
-                            <h4 class="text-sm font-bold uppercase tracking-widest mb-4 text-[#c19b46]">The Al Zaha Solution</h4>
-                            <p class="text-lg leading-relaxed opacity-90 text-[#6d5a2c]">{{ $item['solution'] }}</p>
+                            <h4 class="font-bold uppercase tracking-widest mb-4 text-[#c19b46]" style="font-size: 12.6px;">The Al Zaha Solution</h4>
+                            <p class="leading-relaxed opacity-90 text-[#6d5a2c]" style="font-size: 14.4px;">{{ $item['solution'] }}</p>
                         </div>
-                        <a href="{{ route('quote') }}" class="group flex items-center gap-2 px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]">
+                        <a href="{{ route('quote') }}" class="group flex items-center gap-2 px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]" style="font-size: 14.4px;">
                             Discuss Your Needs
                             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
@@ -87,11 +87,11 @@
     <section class="py-[140px] text-center bg-[#6d5a2c]">
         <x-container>
             <div class="animate-on-scroll" data-animate="fadeInUp">
-                <h2 class="text-white text-5xl mb-8 font-medium">Does Your Industry Demand More?</h2>
-                <p class="text-white/80 text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                <h2 class="text-white mb-8 font-medium" style="font-size: 27px;">Does Your Industry Demand More?</h2>
+                <p class="text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed" style="font-size: 16.2px;">
                     We specialize in complex, high-stakes supply chains. Let's discuss how we can bring Al Zaha's premium sourcing to your sector.
                 </p>
-                <a href="{{ route('contact') }}" class="px-12 py-5 inline-block text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl text-lg bg-[#c19b46]">
+                <a href="{{ route('contact') }}" class="px-12 py-5 inline-block text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl bg-[#c19b46]" style="font-size: 16.2px;">
                     Consult an Industry Expert
                 </a>
             </div>

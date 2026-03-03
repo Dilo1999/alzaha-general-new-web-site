@@ -48,42 +48,42 @@
     </div>
 </header>
 
-{{-- Mobile Menu Overlay --}}
+{{-- Mobile Menu Overlay (slides in from right) --}}
 <div
     data-mobile-menu-overlay
-    class="fixed inset-0 bg-white/90 backdrop-blur-xl z-[45] lg:hidden flex flex-col pt-32 px-8 overflow-y-auto translate-x-full opacity-0 pointer-events-none transition-all duration-300"
+    class="fixed inset-0 bg-white/75 backdrop-blur-xl z-[45] lg:hidden flex flex-col pt-28 px-6 sm:px-8 overflow-y-auto translate-x-full opacity-0 pointer-events-none transition-[transform,opacity] duration-300 ease-out border-l border-white/20 shadow-2xl"
 >
-    <nav class="flex flex-col gap-6 mb-12">
+    <nav class="flex flex-col gap-5 sm:gap-6 mb-10">
         <div>
             <button
                 type="button"
                 data-mobile-solutions-toggle
-                class="w-full flex items-center justify-between text-2xl font-bold transition-colors text-[#6d5a2c]"
+                class="w-full flex items-center justify-between text-lg font-medium transition-colors text-[#6d5a2c] hover:opacity-80 py-1"
                 aria-expanded="false"
             >
                 Solutions
-                <svg data-mobile-solutions-chevron class="w-6 h-6 transition-transform duration-300 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                <svg data-mobile-solutions-chevron class="w-6 h-6 transition-transform duration-300 text-[#c19b46] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
 
-            <div data-mobile-solutions-panel class="overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out flex flex-col gap-4 pl-4 mt-4 border-l-2 border-[#f4c157]">
-                <a href="{{ route('solutions') }}" class="text-lg font-semibold opacity-90 text-[#6d5a2c]" data-mobile-menu-close>All Solutions Overview</a>
-                <a href="{{ route('solutions.sourcing') }}" class="text-lg opacity-80 text-[#6d5a2c]" data-mobile-menu-close>Strategic Sourcing & Procurement</a>
-                <a href="{{ route('solutions.supply-chain') }}" class="text-lg opacity-80 text-[#6d5a2c]" data-mobile-menu-close>Freight & Shipment Management</a>
-                <a href="{{ route('solutions.logistics') }}" class="text-lg opacity-80 text-[#6d5a2c]" data-mobile-menu-close>Integrated Logistics & Documentation</a>
-                <a href="{{ route('solutions.consulting') }}" class="text-lg opacity-80 text-[#6d5a2c]" data-mobile-menu-close>Destination Delivery Support</a>
+            <div data-mobile-solutions-panel class="overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out flex flex-col gap-3 pl-4 mt-3 border-l-2 border-[#f4c157]">
+                <a href="{{ route('solutions') }}" class="text-base font-medium opacity-90 text-[#6d5a2c] hover:opacity-100 py-1.5" data-mobile-menu-close>All Solutions Overview</a>
+                <a href="{{ route('solutions.sourcing') }}" class="text-base opacity-80 text-[#6d5a2c] hover:opacity-100 py-1.5" data-mobile-menu-close>Strategic Sourcing & Procurement</a>
+                <a href="{{ route('solutions.supply-chain') }}" class="text-base opacity-80 text-[#6d5a2c] hover:opacity-100 py-1.5" data-mobile-menu-close>Freight & Shipment Management</a>
+                <a href="{{ route('solutions.logistics') }}" class="text-base opacity-80 text-[#6d5a2c] hover:opacity-100 py-1.5" data-mobile-menu-close>Integrated Logistics & Documentation</a>
+                <a href="{{ route('solutions.consulting') }}" class="text-base opacity-80 text-[#6d5a2c] hover:opacity-100 py-1.5" data-mobile-menu-close>Destination Delivery Support</a>
             </div>
         </div>
 
-        <a href="{{ route('industries') }}" class="text-2xl font-bold text-[#6d5a2c]" data-mobile-menu-close>Industries</a>
-        <a href="{{ route('how-it-works') }}" class="text-2xl font-bold text-[#6d5a2c]" data-mobile-menu-close>How It Works</a>
-        <a href="{{ route('about') }}" class="text-2xl font-bold text-[#6d5a2c]" data-mobile-menu-close>About Us</a>
-        <a href="{{ route('blogs.index') }}" class="text-2xl font-bold text-[#6d5a2c]" data-mobile-menu-close>Blog</a>
-        <a href="{{ route('contact') }}" class="text-2xl font-bold text-[#6d5a2c]" data-mobile-menu-close>Contact</a>
+        <a href="{{ route('industries') }}" class="text-lg font-medium text-[#6d5a2c] hover:opacity-80 py-1" data-mobile-menu-close>Industries</a>
+        <a href="{{ route('how-it-works') }}" class="text-lg font-medium text-[#6d5a2c] hover:opacity-80 py-1" data-mobile-menu-close>How It Works</a>
+        <a href="{{ route('about') }}" class="text-lg font-medium text-[#6d5a2c] hover:opacity-80 py-1" data-mobile-menu-close>About Us</a>
+        <a href="{{ route('blogs.index') }}" class="text-lg font-medium text-[#6d5a2c] hover:opacity-80 py-1" data-mobile-menu-close>Blog</a>
+        <a href="{{ route('contact') }}" class="text-lg font-medium text-[#6d5a2c] hover:opacity-80 py-1" data-mobile-menu-close>Contact</a>
     </nav>
 
     <a
         href="{{ route('quote') }}"
-        class="w-full py-5 text-white font-bold text-xl rounded-full shadow-lg mb-12 bg-[#c19b46] text-center"
+        class="w-full py-4 sm:py-5 text-white font-medium text-lg rounded-full shadow-lg mb-10 bg-[#c19b46] text-center hover:opacity-95 active:scale-[0.98] transition-all"
         data-mobile-menu-close
     >
         Request a Quote

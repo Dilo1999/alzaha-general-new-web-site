@@ -22,7 +22,7 @@
             @if($post->category)
                 <span class="text-sm font-bold tracking-widest uppercase mb-4 block text-[#c19b46]">{{ $post->category }}</span>
             @endif
-            <h1 class="text-3xl md:text-5xl font-bold mb-8 max-w-[900px] mx-auto leading-tight text-[#6d5a2c]">{{ $post->title }}</h1>
+            <h1 class="font-bold mb-8 max-w-[900px] mx-auto leading-tight text-[#6d5a2c]" style="font-size: 27px;">{{ $post->title }}</h1>
             <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm opacity-70 mb-8 text-[#6d5a2c]">
                 @if($post->author)
                     <span>BY {{ strtoupper($post->author) }}</span>
@@ -47,7 +47,7 @@
     @if($post->intro)
     <section class="pb-16 px-8">
         <div class="max-w-[720px] mx-auto">
-            <p class="text-xl md:text-2xl leading-relaxed font-medium mb-12 text-[#6d5a2c]">{{ $post->intro }}</p>
+            <p class="leading-relaxed font-medium mb-12 text-[#6d5a2c]" style="font-size: 18px;">{{ $post->intro }}</p>
             <div class="w-full h-[1px] bg-[#c19b46]"></div>
         </div>
     </section>
@@ -57,11 +57,11 @@
         <div class="max-w-[720px] mx-auto">
             @foreach($contentItems as $item)
                 @if(($item['type'] ?? '') === 'h2')
-                    <h2 class="text-2xl md:text-3xl font-bold mt-[64px] mb-8 leading-tight text-[#6d5a2c]">
+                    <h2 class="font-bold mt-[64px] mb-8 leading-tight text-[#6d5a2c]" style="font-size: 27px;">
                         {{ $item['text'] ?? '' }}
                     </h2>
                 @elseif(($item['type'] ?? '') === 'p')
-                    <p class="text-lg leading-relaxed mb-[24px] opacity-90 text-[#6d5a2c]">
+                    <p class="leading-relaxed mb-[24px] opacity-90 text-[#6d5a2c]" style="font-size: 14.4px;">
                         {{ $item['text'] ?? '' }}
                     </p>
                 @elseif(($item['type'] ?? '') === 'image' && !empty($item['src']))
@@ -70,7 +70,7 @@
                     </div>
                 @elseif(($item['type'] ?? '') === 'blockquote')
                     <div class="my-12 p-10 border-l-4 rounded-r-lg bg-[#f7f4eb] border-[#c19b46]">
-                        <p class="text-xl italic font-medium leading-relaxed text-[#6d5a2c]">
+                        <p class="italic font-medium leading-relaxed text-[#6d5a2c]" style="font-size: 16.2px;">
                             "{{ $item['text'] ?? '' }}"
                         </p>
                     </div>
@@ -82,12 +82,12 @@
     <section class="pb-24 px-8">
         <div class="max-w-[720px] mx-auto">
             @if($post->conclusion)
-                <p class="text-lg leading-relaxed mb-12 opacity-90 text-[#6d5a2c]">{{ $post->conclusion }}</p>
+                <p class="leading-relaxed mb-12 opacity-90 text-[#6d5a2c]" style="font-size: 14.4px;">{{ $post->conclusion }}</p>
             @endif
             <div class="bg-[#f7f4eb] p-12 rounded-[20px] text-center border border-[#6d5a2c]/5">
-                <h3 class="text-2xl font-bold mb-6 text-[#6d5a2c]">Elevate Your Global Sourcing</h3>
-                <p class="mb-8 opacity-80 text-[#6d5a2c]">Partner with Al Zaha for premium supply chain solutions in Dubai and beyond.</p>
-                <a href="{{ route('quote') }}" class="inline-block px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]">Get a Strategic Consultation</a>
+                <h3 class="font-bold mb-6 text-[#6d5a2c]" style="font-size: 18px;">Elevate Your Global Sourcing</h3>
+                <p class="mb-8 opacity-80 text-[#6d5a2c]" style="font-size: 14.4px;">Partner with Al Zaha for premium supply chain solutions in Dubai and beyond.</p>
+                <a href="{{ route('quote') }}" class="inline-block px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]" style="font-size: 14.4px;">Get a Strategic Consultation</a>
             </div>
         </div>
     </section>

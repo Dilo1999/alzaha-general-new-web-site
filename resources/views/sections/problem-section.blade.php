@@ -9,10 +9,10 @@
 <section class="py-24 md:py-40 bg-white">
     <div class="w-full max-w-[1320px] mx-auto px-4 md:px-8">
         <div class="text-center mb-16 md:mb-20 animate-on-scroll" data-animate="fadeInUp">
-            <h2 class="text-3xl md:text-4xl mb-6 font-bold text-[#6d5a2c]">
+            <h2 class="mb-6 font-bold text-[#6d5a2c]" style="font-size: 27px;">
                 International sourcing shouldn't feel unpredictable.
             </h2>
-            <p class="text-base md:text-lg mb-8 max-w-2xl mx-auto text-[#6d5a2c] opacity-70">
+            <p class="mb-8 max-w-2xl mx-auto text-[#6d5a2c] opacity-70" style="font-size: 14.4px;">
                 Multiple suppliers, unclear freight schedules, and documentation delays create unnecessary cost and operational stress.
             </p>
             <div class="w-20 h-1 mx-auto bg-[#c19b46]"></div>
@@ -37,8 +37,8 @@
                         @endif
                     </div>
                     <div>
-                        <h3 class="text-xl mb-3 font-bold text-[#6d5a2c]">{{ $problem['title'] }}</h3>
-                        <p class="leading-relaxed text-sm md:text-base text-[#6d5a2c] opacity-70">{{ $problem['description'] }}</p>
+                        <h3 class="mb-3 font-bold text-[#6d5a2c]" style="font-size: 18px;">{{ $problem['title'] }}</h3>
+                        <p class="leading-relaxed text-[#6d5a2c] opacity-70" style="font-size: 12.6px;">{{ $problem['description'] }}</p>
                     </div>
                 </div>
             @endforeach

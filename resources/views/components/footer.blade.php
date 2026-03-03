@@ -28,8 +28,8 @@
                 </div>
             </div>
 
-            {{-- Solutions --}}
-            <div>
+            {{-- Solutions (desktop & tablet only) --}}
+            <div class="hidden md:block">
                 <h4 class="text-white font-bold text-lg mb-8">Solutions</h4>
                 <ul class="space-y-4">
                     <li><a href="{{ route('solutions') }}" class="text-white/60 hover:text-[#f4c157] transition-colors">Solutions Overview</a></li>
@@ -40,8 +40,8 @@
                 </ul>
             </div>
 
-            {{-- Quick Links --}}
-            <div>
+            {{-- Quick Links (desktop & tablet only) --}}
+            <div class="hidden md:block">
                 <h4 class="text-white font-bold text-lg mb-8">Quick Links</h4>
                 <ul class="space-y-4">
                     <li><a href="{{ route('about') }}" class="text-white/60 hover:text-[#f4c157] transition-colors">About Us</a></li>

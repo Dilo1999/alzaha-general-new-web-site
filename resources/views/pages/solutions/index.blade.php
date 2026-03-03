@@ -13,7 +13,7 @@
 
         <x-container class="relative z-10">
             <div class="animate-now" data-animate="fadeInUp">
-                <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-0 max-w-4xl mx-auto leading-tight">
+                <h1 class="text-white font-bold mb-0 max-w-4xl mx-auto leading-tight" style="font-size: 32.4px;">
                     What We Handle for You
                 </h1>
             </div>
@@ -24,7 +24,7 @@
     <section class="py-20 md:py-[120px] bg-[#f7f4eb]">
         <div class="max-w-[800px] mx-auto px-4 md:px-8 text-center animate-on-scroll" data-animate="fadeInUp">
             <div class="w-16 h-1 mx-auto mb-8 rounded-full bg-[#c19b46]"></div>
-            <p class="text-lg md:text-xl leading-relaxed font-medium text-[#6d5a2c]">
+            <p class="leading-relaxed font-medium text-[#6d5a2c]" style="font-size: 16.2px;">
                 At Al Zaha, we provide a complete sourcing and supply chain ecosystem. From finding the right global partners to final destination delivery, we manage every complexity so you can focus on your core operations.
             </p>
         </div>
@@ -105,18 +105,18 @@
                         @endif
                     </div>
 
-                    <h2 class="text-3xl md:text-4xl mb-6 leading-tight font-bold text-[#6d5a2c]">{{ $service['title'] }}</h2>
+                    <h2 class="mb-6 leading-tight font-bold text-[#6d5a2c]" style="font-size: 27px;">{{ $service['title'] }}</h2>
                     <div class="w-12 h-1 mb-8 rounded-full bg-[#c19b46]"></div>
-                    <p class="text-base md:text-lg mb-8 leading-relaxed opacity-90 text-[#6d5a2c]">{{ $service['description'] }}</p>
+                    <p class="mb-8 leading-relaxed opacity-90 text-[#6d5a2c]" style="font-size: 14.4px;">{{ $service['description'] }}</p>
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                         @foreach($service['bullets'] as $bullet)
                             <li class="flex items-center gap-3">
                                 <svg class="w-5 h-5 text-[#c19b46] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                <span class="text-sm md:text-base text-[#6d5a2c]">{{ $bullet }}</span>
+                                <span class="text-[#6d5a2c]" style="font-size: 14.4px;">{{ $bullet }}</span>
                             </li>
                         @endforeach
                     </ul>
-                    <a href="{{ $service['link'] }}" class="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]">
+                    <a href="{{ $service['link'] }}" class="w-full sm:w-auto group inline-flex items-center justify-center gap-2 px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]" style="font-size: 14.4px;">
                         Explore Details
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                     </a>
@@ -137,13 +137,13 @@
     <section class="py-24 md:py-[140px] text-center bg-[#6d5a2c]">
         <x-container>
             <div class="animate-on-scroll" data-animate="scaleIn">
-                <h2 class="text-white text-3xl md:text-5xl mb-8 font-bold leading-tight">Ready to Optimize Your Global Sourcing?</h2>
-                <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                <h2 class="text-white mb-8 font-bold leading-tight" style="font-size: 27px;">Ready to Optimize Your Global Sourcing?</h2>
+                <p class="text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed" style="font-size: 16.2px;">
                     Connect with our procurement specialists today to discover how Al Zaha can transform your supply chain efficiency.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <a href="{{ route('quote') }}" class="w-full sm:w-auto px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl text-lg bg-[#c19b46]">Request a Quote</a>
-                    <a href="{{ route('contact') }}" class="w-full sm:w-auto px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full border-2 border-[#c19b46] hover:bg-white/5 text-lg">Talk to a Coordinator</a>
+                    <a href="{{ route('quote') }}" class="w-full sm:w-auto px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl bg-[#c19b46]" style="font-size: 16.2px;">Request a Quote</a>
+                    <a href="{{ route('contact') }}" class="w-full sm:w-auto px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full border-2 border-[#c19b46] hover:bg-white/5" style="font-size: 16.2px;">Contact Us</a>
                 </div>
             </div>
         </x-container>

@@ -26,13 +26,13 @@
         </div>
         <div class="relative z-10 w-full max-w-[1320px] mx-auto px-8">
             <div class="max-w-[720px] animate-now" data-animate="fadeInUp">
-                <h1 class="text-white mb-8 leading-tight">Complete Your Supply Chain to Your Doorstep</h1>
-                <p class="text-white/90 text-xl mb-10 leading-relaxed">
+                <h1 class="text-white mb-8 leading-tight font-bold" style="font-size: 32.4px;">Complete Your Supply Chain to Your Doorstep</h1>
+                <p class="text-white/90 mb-10 leading-relaxed" style="font-size: 16.2px;">
                     Al Zaha's Destination Delivery Support service manages the final mile from customs clearance to your site, coordinating local transport, scheduling deliveries around your operations, and ensuring your cargo arrives when and where you need it across the UAE and GCC.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="{{ route('quote') }}" class="px-8 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]">Request a Quote</a>
-                    <a href="{{ route('contact') }}" class="px-8 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full border-2 border-[#c19b46] hover:bg-[#c19b46]/10">Talk to a Coordinator</a>
+                    <a href="{{ route('quote') }}" class="px-8 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]" style="font-size: 14.4px;">Request a Quote</a>
+                    <a href="{{ route('contact') }}" class="px-8 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full border-2 border-[#c19b46] hover:bg-[#c19b46]/10" style="font-size: 14.4px;">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -43,9 +43,9 @@
         <div class="w-full max-w-[1320px] mx-auto px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-6 animate-on-scroll" data-animate="slideLeft">
-                    <h2 class="mb-6 text-[#6d5a2c]">How Destination Delivery Works</h2>
+                    <h2 class="mb-6 text-[#6d5a2c] font-bold" style="font-size: 27px;">How Destination Delivery Works</h2>
                     <div class="w-12 h-1 mb-6 rounded-full bg-[#c19b46]"></div>
-                    <p class="text-lg leading-relaxed opacity-80 mb-8 max-w-[680px] text-[#6d5a2c]">
+                    <p class="leading-relaxed opacity-80 mb-8 max-w-[680px] text-[#6d5a2c]" style="font-size: 14.4px;">
                         Once your cargo clears customs, we coordinate the final leg to your specified location. From warehouse storage to site delivery, we manage transport, scheduling, and any special handling requirements to ensure seamless completion of your supply chain.
                     </p>
                     <ul class="space-y-4">
@@ -59,7 +59,7 @@
                         ] as $item)
                             <li class="flex items-start gap-3">
                                 <svg class="w-5 h-5 flex-shrink-0 mt-1 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                                <span class="text-lg text-[#6d5a2c]">{{ $item }}</span>
+                                <span class="text-[#6d5a2c]" style="font-size: 14.4px;">{{ $item }}</span>
                             </li>
                         @endforeach
                     </ul>
@@ -76,7 +76,7 @@
     {{-- SECTION 2: WHO THIS IS FOR --}}
     <section class="py-[140px] bg-[#6d5a2c] text-white">
         <div class="w-full max-w-[1320px] mx-auto px-8">
-            <h2 class="text-center mb-16 text-white animate-on-scroll" data-animate="fadeInUp">
+            <h2 class="text-center mb-16 text-white font-bold animate-on-scroll" data-animate="fadeInUp" style="font-size: 27px;">
                 Who This Solution Is For
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -93,8 +93,8 @@
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18V10l-4 2-3-2-4 2-3-2-4 2v9Z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 3h3v4h-3Z"/></svg>
                             @endif
                         </div>
-                        <h3 class="text-xl md:text-2xl font-bold mb-4 text-white">{{ $client['title'] }}</h3>
-                        <p class="text-white/60 leading-relaxed">{{ $client['description'] }}</p>
+                        <h3 class="font-bold mb-4 text-white" style="font-size: 18px;">{{ $client['title'] }}</h3>
+                        <p class="text-white/60 leading-relaxed" style="font-size: 12.6px;">{{ $client['description'] }}</p>
                     </div>
                 @endforeach
             </div>
@@ -105,8 +105,8 @@
     <section class="py-[160px] bg-white">
         <div class="w-full max-w-[1320px] mx-auto px-8">
             <div class="text-center mb-16 animate-on-scroll" data-animate="fadeInUp">
-                <h2 class="text-[#6d5a2c]">Why Complete Delivery With Al Zaha</h2>
-                <p class="text-lg mt-6 max-w-3xl mx-auto opacity-80 text-[#6d5a2c]">
+                <h2 class="text-[#6d5a2c] font-bold" style="font-size: 27px;">Why Complete Delivery With Al Zaha</h2>
+                <p class="mt-6 max-w-3xl mx-auto opacity-80 text-[#6d5a2c]" style="font-size: 14.4px;">
                     Operating throughout the UAE and GCC, we provide the local knowledge and coordination capabilities to execute final-mile delivery reliably.
                 </p>
             </div>
@@ -123,8 +123,8 @@
                                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             @endif
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-[#6d5a2c]">{{ $adv['title'] }}</h3>
-                        <p class="opacity-70 leading-relaxed text-[#6d5a2c]">{{ $adv['description'] }}</p>
+                        <h3 class="font-bold mb-4 text-[#6d5a2c]" style="font-size: 18px;">{{ $adv['title'] }}</h3>
+                        <p class="opacity-70 leading-relaxed text-[#6d5a2c]" style="font-size: 14.4px;">{{ $adv['description'] }}</p>
                     </div>
                 @endforeach
             </div>
@@ -138,11 +138,11 @@
             <div class="absolute inset-0 bg-[#6d5a2c] opacity-90"></div>
         </div>
         <div class="relative z-10 w-full max-w-[1320px] mx-auto px-8 text-center animate-on-scroll" data-animate="scaleIn">
-            <h2 class="text-white text-4xl md:text-5xl mb-10 leading-tight max-w-4xl mx-auto">Request a Procurement Quote</h2>
-            <p class="text-white/90 text-xl mb-10 max-w-2xl mx-auto">
+            <h2 class="text-white mb-10 leading-tight max-w-4xl mx-auto font-bold" style="font-size: 27px;">Request a Procurement Quote</h2>
+            <p class="text-white/90 mb-10 max-w-2xl mx-auto" style="font-size: 16.2px;">
                 Provide your delivery requirements and destination details, and we'll prepare a comprehensive quote for final-mile coordination.
             </p>
-            <a href="{{ route('quote') }}" class="inline-block px-10 py-5 text-white font-semibold text-lg transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl bg-[#c19b46]">Get Your Quote</a>
+            <a href="{{ route('quote') }}" class="inline-block px-10 py-5 text-white font-semibold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl bg-[#c19b46]" style="font-size: 16.2px;">Get Your Quote</a>
         </div>
     </section>
 </div>

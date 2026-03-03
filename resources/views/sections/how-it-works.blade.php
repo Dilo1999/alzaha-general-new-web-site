@@ -8,7 +8,7 @@
 <section id="how-it-works" class="py-24 md:py-40 bg-[#6d5a2c] text-white">
     <div class="w-full max-w-[1320px] mx-auto px-4 md:px-8">
         <div class="text-center mb-16 md:mb-20 animate-on-scroll" data-animate="fadeInUp">
-            <h2 class="text-3xl md:text-4xl mb-4 font-bold text-white">
+            <h2 class="mb-4 font-bold text-white" style="font-size: 27px;">
                 A simple system from sourcing to delivery.
             </h2>
         </div>
@@ -29,15 +29,15 @@
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h12v10H3z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10h4l2 3v4h-6V10z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17a2 2 0 104 0M17 17a2 2 0 104 0"/></svg>
                         @endif
                     </div>
-                    <h3 class="text-xl md:text-2xl mb-4 font-bold text-white">{{ $step['title'] }}</h3>
-                    <p class="text-base md:text-lg leading-relaxed mb-4 font-bold text-white">{{ $step['description'] }}</p>
-                    <p class="text-sm md:text-base leading-relaxed text-white/60">{{ $step['subtitle'] }}</p>
+                    <h3 class="mb-4 font-bold text-white" style="font-size: 18px;">{{ $step['title'] }}</h3>
+                    <p class="leading-relaxed mb-4 font-bold text-white" style="font-size: 14.4px;">{{ $step['description'] }}</p>
+                    <p class="leading-relaxed text-white/60" style="font-size: 12.6px;">{{ $step['subtitle'] }}</p>
                 </div>
             @endforeach
         </div>
 
         <div class="text-center">
-            <a href="{{ route('quote') }}" class="w-full sm:w-auto inline-block px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46] animate-on-scroll" data-animate="scaleIn">
+            <a href="{{ route('quote') }}" class="w-full sm:w-auto inline-block px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46] animate-on-scroll" data-animate="scaleIn" style="font-size: 14.4px;">
                 Request a Quote
             </a>
         </div>

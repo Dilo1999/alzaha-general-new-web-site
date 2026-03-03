@@ -13,12 +13,12 @@
         @csrf
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-2">
-                <label class="text-sm font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" for="quote-name">Full Name</label>
+                <label class="font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" style="font-size: 12.6px;" for="quote-name">Full Name</label>
                 <input id="quote-name" type="text" name="name" value="{{ old('name') }}" placeholder="John Doe" required class="w-full px-5 py-4 bg-[#f7f4eb]/50 border border-[#6d5a2c]/10 rounded-[10px] focus:outline-none focus:border-[#c19b46] transition-colors @error('name') border-red-400 @enderror">
                 @error('name')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
             </div>
             <div class="space-y-2">
-                <label class="text-sm font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" for="quote-company">Company Name</label>
+                <label class="font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" style="font-size: 12.6px;" for="quote-company">Company Name</label>
                 <input id="quote-company" type="text" name="company" value="{{ old('company') }}" placeholder="Enterprises Ltd." class="w-full px-5 py-4 bg-[#f7f4eb]/50 border border-[#6d5a2c]/10 rounded-[10px] focus:outline-none focus:border-[#c19b46] transition-colors @error('company') border-red-400 @enderror">
                 @error('company')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
             </div>
@@ -26,12 +26,12 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-2">
-                <label class="text-sm font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" for="quote-email">Email Address</label>
+                <label class="font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" style="font-size: 12.6px;" for="quote-email">Email Address</label>
                 <input id="quote-email" type="email" name="email" value="{{ old('email') }}" placeholder="john@company.com" required class="w-full px-5 py-4 bg-[#f7f4eb]/50 border border-[#6d5a2c]/10 rounded-[10px] focus:outline-none focus:border-[#c19b46] transition-colors @error('email') border-red-400 @enderror">
                 @error('email')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
             </div>
             <div class="space-y-2">
-                <label class="text-sm font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" for="quote-phone">Phone Number</label>
+                <label class="font-semibold uppercase tracking-wider opacity-60 ml-1 text-[#6d5a2c]" style="font-size: 12.6px;" for="quote-phone">Phone Number</label>
                 <input id="quote-phone" type="tel" name="phone" value="{{ old('phone') }}" placeholder="+971 50 000 0000" class="w-full px-5 py-4 bg-[#f7f4eb]/50 border border-[#6d5a2c]/10 rounded-[10px] focus:outline-none focus:border-[#c19b46] transition-colors @error('phone') border-red-400 @enderror">
                 @error('phone')<p class="text-red-600 text-sm">{{ $message }}</p>@enderror
             </div>
@@ -106,7 +106,7 @@
             })();
         </script>
 
-        <button type="submit" class="w-full py-5 text-white font-bold rounded-[10px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.01] shadow-lg bg-[#c19b46]">
+        <button type="submit" class="w-full py-5 text-white font-bold rounded-[10px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.01] shadow-lg bg-[#c19b46]" style="font-size: 14.4px;">
             Submit Request
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
         </button>

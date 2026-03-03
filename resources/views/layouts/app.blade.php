@@ -12,17 +12,13 @@
 
     <link rel="icon" type="image/png" href="{{ asset('images/favicon/favicon.png') }}">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('styles')
 </head>
-<body class="antialiased min-h-screen flex flex-col bg-[#f7f4eb] text-gray-900">
+<body class="antialiased min-h-screen flex flex-col bg-[#f7f4eb] text-gray-900 font-sans">
     @include('components.header')
 
-    <main class="flex-1">
+    <main class="flex-1 pt-[88px]">
         @yield('content')
     </main>
 

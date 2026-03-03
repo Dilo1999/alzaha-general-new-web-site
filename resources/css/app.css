@@ -63,7 +63,14 @@
   }
 }
 
-/* Base typography (match React src/styles/theme.css intent) */
+/* Base typography (match React src/styles/theme.css) */
+:root {
+  --font-size: 16px;
+}
+html {
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
 @layer base {
   h1 { @apply text-2xl font-medium leading-[1.5]; }
   h2 { @apply text-xl font-medium leading-[1.5]; }

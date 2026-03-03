@@ -60,7 +60,7 @@
 <section class="py-16 md:py-28 bg-white">
     <div class="w-full max-w-[1320px] mx-auto px-4 md:px-8">
         <div class="text-center mb-10 md:mb-14 animate-on-scroll" data-animate="fadeInUp">
-            <h2 class="text-3xl md:text-5xl mb-4 font-bold tracking-tight text-[#6d5a2c]">
+            <h2 class="mb-4 font-bold tracking-tight text-[#6d5a2c]" style="font-size: 27px;">
                 What We Handle for You
             </h2>
             <div class="w-24 h-1 mx-auto mt-6 bg-[#c19b46]"></div>
@@ -88,7 +88,7 @@
                                     <svg class="w-8 h-8 text-[#f4c157]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 8l-9 5-9-5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8V16l9 5 9-5V8"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13v8"/></svg>
                                 @endif
                             </div>
-                            <h3 class="text-lg md:text-xl font-bold leading-tight text-white px-2">
+                            <h3 class="font-bold leading-tight text-white px-2" style="font-size: 16.2px;">
                                 {{ $item['title'] }}
                             </h3>
                         </div>
@@ -96,10 +96,10 @@
 
                     {{-- Bottom Section: Content --}}
                     <div class="flex-1 p-6 md:p-8 flex flex-col">
-                        <h4 class="text-base md:text-lg font-bold mb-4 leading-snug text-[#6d5a2c]">
+                        <h4 class="font-bold mb-4 leading-snug text-[#6d5a2c]" style="font-size: 14.4px;">
                             {{ $item['subtitle'] }}
                         </h4>
-                        <p class="text-sm md:text-base mb-6 leading-relaxed text-[#6d5a2c] opacity-80">
+                        <p class="mb-6 leading-relaxed text-[#6d5a2c] opacity-80" style="font-size: 12.6px;">
                             {{ $item['description'] }}
                         </p>
 
@@ -109,13 +109,13 @@
                                     <div class="mt-1 flex-shrink-0">
                                         <svg class="w-4 h-4 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                     </div>
-                                    <span class="text-sm leading-tight text-[#6d5a2c] opacity-90">{{ $feature }}</span>
+                                    <span class="leading-tight text-[#6d5a2c] opacity-90" style="font-size: 12.6px;">{{ $feature }}</span>
                                 </div>
                             @endforeach
                         </div>
 
-                        <a href="{{ $item['link'] }}" class="mt-auto flex items-center gap-2 font-bold transition-all duration-300 hover:gap-3 text-[#c19b46] group/link">
-                            <span class="text-sm uppercase tracking-wider">Explore Solution</span>
+                        <a href="{{ $item['link'] }}" class="mt-auto flex items-center gap-2 font-bold transition-all duration-300 hover:gap-3 text-[#c19b46] group/link" style="font-size: 12.6px;">
+                            <span class="uppercase tracking-wider">Explore Solution</span>
                             <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
                     </div>

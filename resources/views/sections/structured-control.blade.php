@@ -1,7 +1,7 @@
 <section class="py-24 md:py-40 bg-[#6d5a2c] text-white">
     <div class="w-full max-w-[1320px] mx-auto px-4 md:px-8">
         <div class="text-center mb-16 md:mb-20 animate-on-scroll" data-animate="fadeInUp">
-            <h2 class="text-3xl md:text-4xl mb-4 font-bold text-white">
+            <h2 class="mb-4 font-bold text-white" style="font-size: 27px;">
                 Why businesses choose Al-Zaha
             </h2>
         </div>
@@ -57,10 +57,10 @@
                         @endif
                     </div>
 
-                    <h3 class="text-lg md:text-xl mb-6 font-bold leading-tight text-white">
+                    <h3 class="mb-6 font-bold leading-tight text-white" style="font-size: 18px;">
                         {{ $feature['title'] }}
                     </h3>
-                    <p class="text-sm md:text-base leading-relaxed text-white/70">
+                    <p class="leading-relaxed text-white/70" style="font-size: 14.4px;">
                         {{ $feature['description'] }}
                     </p>
                 </div>

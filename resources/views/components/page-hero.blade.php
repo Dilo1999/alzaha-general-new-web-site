@@ -16,9 +16,9 @@
 
     <div class="relative z-10 w-full max-w-[1320px] mx-auto px-4 sm:px-8">
         <div class="max-w-[720px]">
-            <h1 class="text-4xl sm:text-5xl text-white mb-6 md:mb-8 leading-tight">{{ $title }}</h1>
+            <h1 class="text-white mb-6 md:mb-8 leading-tight font-bold" style="font-size: 32.4px;">{{ $title }}</h1>
             @if($subtitle)
-                <p class="text-lg sm:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed">{{ $subtitle }}</p>
+                <p class="text-white/90 mb-8 md:mb-10 leading-relaxed" style="font-size: 16.2px;">{{ $subtitle }}</p>
             @endif
             @if(isset($buttons))
                 <div class="flex flex-wrap gap-4">
