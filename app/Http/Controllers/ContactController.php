@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactFormMail;
 use App\Services\SeoService;
+use App\Support\FormMailer;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
-use Throwable;
 
 class ContactController extends Controller
 {
@@ -37,17 +35,7 @@ class ContactController extends Controller
             'message.required' => 'Please enter your message.',
         ]);
 
-        try {
-            Mail::to(config('mail.contact_to', config('mail.from.address')))
-                ->send(new ContactFormMail(
-                    senderName: $validated['name'],
-                    senderEmail: $validated['email'],
-                    formSubject: $validated['subject'],
-                    messageBody: $validated['message'],
-                ));
-        } catch (Throwable $exception) {
-            report($exception);
-
+        if (! FormMailer::sendContact($validated)) {
             return back()
                 ->withInput()
                 ->withErrors([
