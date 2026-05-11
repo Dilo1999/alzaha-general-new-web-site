@@ -42,7 +42,7 @@ return [
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
-            'timeout' => env('MAIL_TIMEOUT', 15),
+            'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
             'verify_peer' => env('MAIL_VERIFY_PEER', true),
         ],
@@ -82,7 +82,10 @@ return [
 
         'failover' => [
             'transport' => 'failover',
-            'mailers' => array_values(array_filter(array_map('trim', explode(',', env('MAIL_FAILOVER_MAILERS', 'smtp,sendmail'))))),
+            'mailers' => [
+                'smtp',
+                'log',
+            ],
         ],
 
         'roundrobin' => [

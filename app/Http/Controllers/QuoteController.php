@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\QuoteRequestMail;
 use App\Services\SeoService;
-use App\Support\FormMailer;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
+use Throwable;
 
 class QuoteController extends Controller
 {
@@ -34,7 +36,20 @@ class QuoteController extends Controller
 
         $file = $request->file('file');
 
-        if (! FormMailer::sendQuote($validated, $file)) {
+        try {
+            Mail::to(config('mail.contact_to', config('mail.from.address')))
+                ->send(new QuoteRequestMail(
+                    name: $validated['name'],
+                    company: $validated['company'] ?? null,
+                    email: $validated['email'],
+                    phone: $validated['phone'] ?? null,
+                    industry: $validated['industry'] ?? null,
+                    details: $validated['details'] ?? null,
+                    file: $file,
+                ));
+        } catch (Throwable $exception) {
+            report($exception);
+
             return back()
                 ->withInput()
                 ->withErrors([
