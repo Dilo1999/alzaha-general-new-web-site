@@ -51,7 +51,7 @@
                             <!-- Email -->
                             <p style="margin:0 0 4px; font-size:10px; letter-spacing:0.15em; text-transform:uppercase; color:#c19b46;">Email Address</p>
                             <p style="margin:0 0 20px; font-size:16px; color:#1c140a;">
-                                <a href="/cdn-cgi/l/email-protection#ee9595ceca9d8b808a8b9cab838f8782ce9393" style="color:#8a6f2e; text-decoration:none;">{{ $senderEmail }}</a>
+                                <a href="mailto:{{ $senderEmail }}" style="color:#8a6f2e; text-decoration:none;">{{ $senderEmail }}</a>
                             </p>
                             <hr style="border:none; border-top:1px solid #f0ece2; margin:0 0 20px;">
 
@@ -78,3 +78,8 @@
 
                 </table>
             </td>
+        </tr>
+    </table>
+
+</body>
+</html>

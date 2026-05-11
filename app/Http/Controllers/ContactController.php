@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
+use Throwable;
 
 class ContactController extends Controller
 {
@@ -36,13 +37,23 @@ class ContactController extends Controller
             'message.required' => 'Please enter your message.',
         ]);
 
-        Mail::to(config('mail.contact_to', config('mail.from.address')))
-            ->send(new ContactFormMail(
-                senderName: $validated['name'],
-                senderEmail: $validated['email'],
-                formSubject: $validated['subject'],
-                messageBody: $validated['message'],
-            ));
+        try {
+            Mail::to(config('mail.contact_to', config('mail.from.address')))
+                ->send(new ContactFormMail(
+                    senderName: $validated['name'],
+                    senderEmail: $validated['email'],
+                    formSubject: $validated['subject'],
+                    messageBody: $validated['message'],
+                ));
+        } catch (Throwable $exception) {
+            report($exception);
+
+            return back()
+                ->withInput()
+                ->withErrors([
+                    'email' => 'We could not send your message right now. Please try again later or contact us directly.',
+                ]);
+        }
 
         return redirect()->route('contact')->with('contact_success', true);
     }

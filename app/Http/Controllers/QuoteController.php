@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
+use Throwable;
 
 class QuoteController extends Controller
 {
@@ -35,16 +36,26 @@ class QuoteController extends Controller
 
         $file = $request->file('file');
 
-        Mail::to(config('mail.contact_to', config('mail.from.address')))
-            ->send(new QuoteRequestMail(
-                name: $validated['name'],
-                company: $validated['company'] ?? null,
-                email: $validated['email'],
-                phone: $validated['phone'] ?? null,
-                industry: $validated['industry'] ?? null,
-                details: $validated['details'] ?? null,
-                file: $file,
-            ));
+        try {
+            Mail::to(config('mail.contact_to', config('mail.from.address')))
+                ->send(new QuoteRequestMail(
+                    name: $validated['name'],
+                    company: $validated['company'] ?? null,
+                    email: $validated['email'],
+                    phone: $validated['phone'] ?? null,
+                    industry: $validated['industry'] ?? null,
+                    details: $validated['details'] ?? null,
+                    file: $file,
+                ));
+        } catch (Throwable $exception) {
+            report($exception);
+
+            return back()
+                ->withInput()
+                ->withErrors([
+                    'email' => 'We could not send your quote request right now. Please try again later or contact us directly.',
+                ]);
+        }
 
         return redirect()->route('quote')->with('quote_success', true);
     }
