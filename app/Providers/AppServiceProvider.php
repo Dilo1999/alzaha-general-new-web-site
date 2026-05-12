@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Mail\ResendApiTransport;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,6 +22,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Mail::extend('resend', function (array $config = []) {
+            return new ResendApiTransport(
+                apiKey: $config['key'] ?? config('services.resend.key'),
+                endpoint: $config['endpoint'] ?? config('services.resend.endpoint', 'https://api.resend.com'),
+                timeout: (int) ($config['timeout'] ?? 10),
+                verifySsl: filter_var($config['verify_ssl'] ?? true, FILTER_VALIDATE_BOOLEAN),
+            );
+        });
+
         // MySQL (e.g. MariaDB / older MySQL) has a 1000-byte index limit with utf8mb4.
         // Default string length 191 keeps unique indexes under that limit.
         Schema::defaultStringLength(191);

@@ -25,6 +25,12 @@ return [
         'token' => env('POSTMARK_TOKEN'),
     ],
 
+    'resend' => [
+        'key' => env('RESEND_API_KEY'),
+        'endpoint' => env('RESEND_ENDPOINT', 'https://api.resend.com'),
+        'verify_ssl' => env('RESEND_VERIFY_SSL', true),
+    ],
+
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),

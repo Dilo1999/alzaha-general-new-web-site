@@ -29,7 +29,8 @@ return [
     | mailers below. You are free to add additional mailers as required.
     |
     | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
-    |            "postmark", "log", "array", "failover", "roundrobin"
+    |            "postmark", "resend", "log", "array", "failover",
+    |            "roundrobin"
     |
     */
 
@@ -64,6 +65,14 @@ return [
             // 'client' => [
             //     'timeout' => 5,
             // ],
+        ],
+
+        'resend' => [
+            'transport' => 'resend',
+            'key' => env('RESEND_API_KEY'),
+            'endpoint' => env('RESEND_ENDPOINT', 'https://api.resend.com'),
+            'timeout' => env('RESEND_TIMEOUT', 10),
+            'verify_ssl' => env('RESEND_VERIFY_SSL', true),
         ],
 
         'sendmail' => [
