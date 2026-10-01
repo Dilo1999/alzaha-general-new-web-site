@@ -2,7 +2,18 @@
  * Mobile navigation overlay + Solutions accordion.
  * Mirrors the React Header UX using Tailwind classes.
  */
+function initHeaderScroll() {
+  const header = document.querySelector('[data-site-header]');
+  if (!header) return;
+
+  const update = () => header.classList.toggle('is-scrolled', window.scrollY > 12);
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+}
+
 function initNav() {
+  initHeaderScroll();
+
   const toggleBtn = document.querySelector('[data-mobile-menu-toggle]');
   const overlay = document.querySelector('[data-mobile-menu-overlay]');
   if (!toggleBtn || !overlay) return;

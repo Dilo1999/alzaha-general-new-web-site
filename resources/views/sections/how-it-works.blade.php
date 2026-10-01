@@ -1,44 +1,46 @@
 @php
     $steps = [
-        ['icon' => 'search', 'title' => 'Step 1', 'description' => 'Submit your requirements', 'subtitle' => '(Send list, BOQ, specs, timelines)'],
-        ['icon' => 'settings', 'title' => 'Step 2', 'description' => 'We source, quote, and schedule', 'subtitle' => '(Supplier coordination + freight planning)'],
-        ['icon' => 'truck', 'title' => 'Step 3', 'description' => 'We coordinate delivery', 'subtitle' => '(Documentation + shipment + destination support)'],
+        ['icon' => 'clipboard-list', 'title' => 'Submit your requirements', 'subtitle' => 'Send your list, BOQ, specs and timelines.'],
+        ['icon' => 'settings', 'title' => 'We source, quote & schedule', 'subtitle' => 'Supplier coordination and freight planning.'],
+        ['icon' => 'truck', 'title' => 'We coordinate delivery', 'subtitle' => 'Documentation, shipment and destination support.'],
     ];
 @endphp
-<section id="how-it-works" class="py-24 md:py-40 bg-[#6d5a2c] text-white">
-    <div class="w-full max-w-[1320px] mx-auto px-4 md:px-8">
-        <div class="text-center mb-16 md:mb-20 animate-on-scroll" data-animate="fadeInUp">
-            <h2 class="mb-4 font-bold text-white" style="font-size: 27px;">
-                A simple system from sourcing to delivery.
-            </h2>
+<section id="how-it-works" class="relative isolate overflow-hidden py-24 md:py-36 bg-aurora text-white grain scroll-mt-20">
+    <div class="absolute inset-0 -z-10 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" aria-hidden="true"></div>
+
+    <div class="w-full max-w-[1320px] mx-auto px-5 md:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-24 animate-on-scroll" data-animate="fadeInUp">
+            <div class="max-w-2xl">
+                <span class="eyebrow eyebrow-light">How it works</span>
+                <h2 class="display-2 mt-5 text-white">
+                    A simple system from <span class="accent accent-light">sourcing to delivery.</span>
+                </h2>
+            </div>
+            <a href="{{ route('how-it-works') }}" class="btn btn-ghost shrink-0 self-start md:self-auto">
+                Explore the process <x-glyph name="arrow-right" class="btn-arrow w-4 h-4" stroke="2" />
+            </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
+        <div class="relative grid md:grid-cols-3 gap-5 lg:gap-6">
+
             @foreach($steps as $index => $step)
-                <div
-                    class="group flex flex-col bg-white/5 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 p-8 lg:p-10 border border-white/10 hover:bg-white/10 animate-on-scroll"
-                    data-animate="fadeInUp"
-                    data-delay="{{ $index * 0.1 }}"
-                >
-                    <div class="w-16 h-16 flex items-center justify-center mb-8 rounded-full bg-[#c19b46] transition-transform duration-500 group-hover:scale-110 shadow-lg shadow-black/20">
-                        @if($step['icon'] === 'search')
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                        @elseif($step['icon'] === 'settings')
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        @else
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h12v10H3z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10h4l2 3v4h-6V10z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17a2 2 0 104 0M17 17a2 2 0 104 0"/></svg>
-                        @endif
+                <div class="group relative card-dark p-8 lg:p-10 animate-on-scroll" data-animate="fadeInUp" data-delay="{{ $index * 0.12 }}">
+                    <div class="flex items-center justify-between">
+                        <span class="relative w-16 h-16 inline-flex items-center justify-center rounded-2xl bg-gradient-to-b from-gold-light to-gold text-ink shadow-[0_10px_40px_-8px_rgba(244,193,87,0.6)] transition-transform duration-500 group-hover:-rotate-6">
+                            <x-glyph :name="$step['icon']" class="w-7 h-7" />
+                        </span>
+                        <span class="font-serif italic text-6xl leading-none text-white/10 transition-colors duration-500 group-hover:text-gold-light/30">0{{ $index + 1 }}</span>
                     </div>
-                    <h3 class="mb-4 font-bold text-white" style="font-size: 18px;">{{ $step['title'] }}</h3>
-                    <p class="leading-relaxed mb-4 font-bold text-white" style="font-size: 14.4px;">{{ $step['description'] }}</p>
-                    <p class="leading-relaxed text-white/60" style="font-size: 12.6px;">{{ $step['subtitle'] }}</p>
+                    <div class="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-gold-light">Step {{ $index + 1 }}</div>
+                    <h3 class="mt-3 text-2xl font-semibold tracking-tight text-white">{{ $step['title'] }}</h3>
+                    <p class="mt-3 leading-relaxed text-white/60">{{ $step['subtitle'] }}</p>
                 </div>
             @endforeach
         </div>
 
-        <div class="text-center">
-            <a href="{{ route('quote') }}" class="w-full sm:w-auto inline-block px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46] animate-on-scroll" data-animate="scaleIn" style="font-size: 14.4px;">
-                Request a Quote
+        <div class="mt-14 flex justify-center animate-on-scroll" data-animate="fadeInUp">
+            <a href="{{ route('quote') }}" class="btn btn-gold btn-lg">
+                Start with a quote <x-glyph name="arrow-right" class="btn-arrow w-5 h-5" stroke="2" />
             </a>
         </div>
     </div>

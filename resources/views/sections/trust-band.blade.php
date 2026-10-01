@@ -5,43 +5,22 @@
         '11.webp', '12.webp', '13.webp', '14.webp', '15.webp',
         '16.jpg',
     ];
-    $brands = array_map(fn($file) => [
-        'name' => 'Partner',
-        'logo' => asset('images/brand/' . $file),
-    ], $brandLogos);
-    // Duplicate multiple times so the strip can scroll and every logo appears
-    $duplicatedBrands = array_merge($brands, $brands, $brands);
 @endphp
-<section class="py-10 md:py-16 overflow-hidden bg-white">
-    <div class="relative">
-        {{-- Gradient Overlays for Fade Effect --}}
-        <div class="absolute inset-y-0 left-0 w-20 md:w-40 z-10 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
-        <div class="absolute inset-y-0 right-0 w-20 md:w-40 z-10 bg-gradient-to-l from-white via-white/80 to-transparent"></div>
+<section class="py-20 md:py-24 bg-white border-y border-ink/5 overflow-hidden">
+    <div class="w-full max-w-[1320px] mx-auto px-5 md:px-8 mb-10 md:mb-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-ink-muted">Brands &amp; partners we work with</p>
+        <div class="hidden md:block flex-1 ml-8 divider-gold"></div>
+    </div>
 
-        <div class="trust-band-marquee flex items-center gap-6 md:gap-10 whitespace-nowrap">
-            @foreach($duplicatedBrands as $brand)
-                <div class="group flex-shrink-0 w-[160px] md:w-[240px] aspect-square flex items-center justify-center bg-[#f7f4eb]/40 border border-[#6d5a2c]/5 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-white p-6 md:p-8">
-                    <img src="{{ $brand['logo'] }}" alt="{{ $brand['name'] }}" class="max-w-full max-h-full object-contain contrast-125 transition-transform duration-500 group-hover:scale-110 scale-[1.35]">
-                </div>
+    <div class="marquee mask-fade-x">
+        <div class="marquee-track flex w-max gap-4 md:gap-5">
+            @foreach([1, 2] as $copy)
+                @foreach($brandLogos as $file)
+                    <div class="group flex-shrink-0 w-[150px] h-[96px] md:w-[200px] md:h-[120px] flex items-center justify-center rounded-2xl bg-cream/60 border border-ink/5 p-5 md:p-6 transition-colors duration-300 hover:bg-white hover:border-gold/30" @if($copy === 2) aria-hidden="true" @endif>
+                        <img src="{{ asset('images/brand/' . $file) }}" alt="{{ $copy === 1 ? 'Partner logo' : '' }}" class="max-w-full max-h-full object-contain grayscale opacity-70 mix-blend-multiply transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100" loading="lazy">
+                    </div>
+                @endforeach
             @endforeach
         </div>
     </div>
 </section>
-
-<style>
-    @keyframes trust-band-marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-    }
-
-    .trust-band-marquee {
-        animation: trust-band-marquee 40s linear infinite;
-        will-change: transform;
-    }
-
-    @media (max-width: 768px) {
-        .trust-band-marquee {
-            animation-duration: 25s;
-        }
-    }
-</style>

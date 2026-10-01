@@ -17,51 +17,31 @@
 @if ($message)
     <div
         id="flash-popup"
-        class="fixed inset-0 z-40 flex items-center justify-center bg-black/30 backdrop-blur-sm"
+        class="fixed inset-0 z-[60] flex items-center justify-center bg-ink/50 backdrop-blur-sm px-4"
+        role="dialog"
+        aria-modal="true"
         aria-live="assertive"
+        onclick="if(event.target===this){this.remove();}"
     >
-        <div class="w-full max-w-sm px-4 sm:px-0">
-            <div class="rounded-2xl bg-[#f7f4eb] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.75)] border border-[#c19b46]/40 overflow-hidden">
-                <div class="flex items-start gap-3 px-4 py-3 sm:px-5 sm:py-4">
-                    <div class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#c19b46]/15 text-[#c19b46]">
-                        <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414L9 13.414l4.707-4.707z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div class="flex-1">
-                        <p class="text-sm font-semibold text-[#6d5a2c]">
-                            {{ $title }}
-                        </p>
-                        <p class="mt-1 text-xs sm:text-sm text-[#6d5a2c]/80">
-                            {{ $message }}
-                        </p>
-                    </div>
-                    <button
-                        type="button"
-                        onclick="(function(){var el=document.getElementById('flash-popup'); if(el){ el.remove(); }})();"
-                        class="ml-2 inline-flex rounded-full p-1 text-[#b3a57a] hover:text-[#6d5a2c] hover:bg-[#f7f4eb] transition"
-                        aria-label="Close notification"
-                    >
-                        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 8.586L5.757 4.343A1 1 0 104.343 5.757L8.586 10l-4.243 4.243a1 1 0 101.414 1.414L10 11.414l4.243 4.243a1 1 0 001.414-1.414L11.414 10l4.243-4.243A1 1 0 0014.243 4.343L10 8.586z" clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+        <div class="w-full max-w-md rounded-[2rem] bg-white p-8 md:p-10 text-center shadow-[0_40px_100px_-30px_rgba(0,0,0,0.6)] animate-now" data-animate="scaleIn">
+            <span class="mx-auto w-16 h-16 rounded-full bg-gradient-to-b from-gold-light to-gold text-ink inline-flex items-center justify-center shadow-gold">
+                <x-glyph name="check" class="w-8 h-8" stroke="2.5" />
+            </span>
+            <h2 class="mt-6 text-2xl font-semibold tracking-tight">{{ $title }}</h2>
+            <p class="mt-2 text-ink-muted leading-relaxed">{{ $message }}</p>
+            <button
+                type="button"
+                onclick="document.getElementById('flash-popup')?.remove();"
+                class="btn btn-dark mt-8 w-full"
+            >
+                Done
+            </button>
         </div>
     </div>
 
     <script>
-        (function () {
-            var timeout = 6000;
-            var el = document.getElementById('flash-popup');
-            if (!el) return;
-            setTimeout(function () {
-                if (el && el.parentNode) {
-                    el.parentNode.removeChild(el);
-                }
-            }, timeout);
-        })();
+        setTimeout(function () {
+            document.getElementById('flash-popup')?.remove();
+        }, 8000);
     </script>
 @endif
-

@@ -6,144 +6,110 @@
 @php
     $steps = [
         [
-            'icon' => 'search',
-            'number' => 'Step 1',
+            'icon' => 'clipboard-list',
             'title' => 'Submit your requirements',
-            'subtitle' => '(Send list, BOQ, specs, timelines)',
+            'subtitle' => 'Send list, BOQ, specs, timelines',
             'description' => 'Share your project specifications through our streamlined intake process. Our team reviews and clarifies every detail to ensure precision from the start.',
             'image' => asset('images/content/Submit.jpg'),
         ],
         [
             'icon' => 'settings',
-            'number' => 'Step 2',
             'title' => 'We source, quote, and schedule',
-            'subtitle' => '(Supplier coordination + freight planning)',
+            'subtitle' => 'Supplier coordination + freight planning',
             'description' => 'Leveraging our global network, we identify optimal suppliers, negotiate terms, and present you with transparent, competitive pricing and integrated timelines.',
             'image' => asset('images/content/source.jpg'),
         ],
         [
             'icon' => 'truck',
-            'number' => 'Step 3',
             'title' => 'We coordinate delivery',
-            'subtitle' => '(Documentation + shipment + destination support)',
+            'subtitle' => 'Documentation + shipment + destination support',
             'description' => 'From freight booking to customs clearance, we manage every touchpoint. Your materials arrive on schedule, compliant, and ready for operational use.',
             'image' => asset('images/content/delivery.jpg'),
         ],
     ];
     $benefits = [
-        ['icon' => 'shield', 'title' => 'One-Point Coordination', 'description' => 'Single point of contact eliminates confusion and streamlines communication across all vendors.'],
+        ['icon' => 'target', 'title' => 'One-Point Coordination', 'description' => 'Single point of contact eliminates confusion and streamlines communication across all vendors.'],
         ['icon' => 'package', 'title' => 'Consolidated Shipments', 'description' => 'Combine multiple orders into optimized shipments, reducing costs and simplifying logistics.'],
         ['icon' => 'file-check', 'title' => 'Compliance Documentation', 'description' => 'Complete regulatory paperwork handled professionally, ensuring smooth customs clearance.'],
         ['icon' => 'map-pin', 'title' => 'Destination Support', 'description' => 'On-ground assistance in the UAE for receiving, inspection, and final mile delivery.'],
     ];
 @endphp
-<div class="flex flex-col">
-    {{-- HERO (matches React) --}}
-    <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center text-center">
-        <div class="absolute inset-0 z-0">
-            <img src="{{ asset('images/hero/how-it-works.jpg') }}" alt="How It Works Hero" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-[#6d5a2c]/85 mix-blend-multiply"></div>
-        </div>
-        <x-container class="relative z-10 px-8">
-            <div class="animate-now" data-animate="fadeInUp">
-                <h1 class="text-white font-bold mb-0 max-w-4xl mx-auto leading-[1.1]" style="font-size: 32.4px;">
-                    A simple system from sourcing to delivery
-                </h1>
-            </div>
-        </x-container>
-    </section>
 
-    @foreach($steps as $index => $step)
-    <section class="py-[140px]" style="background-color: {{ $index % 2 !== 0 ? '#f7f4eb' : 'white' }}">
-        <x-container class="px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-20 {{ $index % 2 !== 0 ? 'lg:flex-row-reverse' : '' }}">
-                {{-- Image side --}}
-                <div class="flex-1 w-full animate-on-scroll" data-animate="scaleIn">
-                    <div class="aspect-[4/3] rounded-[24px] overflow-hidden shadow-2xl">
-                        <img src="{{ $step['image'] }}" alt="{{ $step['title'] }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                    </div>
-                </div>
+<x-page-hero
+    eyebrow="How it works"
+    title='A simple system from <span class="accent accent-light">sourcing to delivery.</span>'
+    subtitle="Three clear steps. One accountable team. Full visibility from your first requirement to final delivery."
+    :image="asset('images/hero/how-it-works.jpg')"
+>
+    <x-slot:buttons>
+        <a href="{{ route('quote') }}" class="btn btn-gold btn-lg">Get started <x-glyph name="arrow-right" class="btn-arrow w-5 h-5" stroke="2" /></a>
+        <a href="#steps" class="btn btn-ghost btn-lg">View the steps</a>
+    </x-slot:buttons>
+</x-page-hero>
 
-                {{-- Text side --}}
-                <div class="flex-1 animate-on-scroll" data-animate="fadeInUp">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-[#f7f4eb]">
-                            @if($step['icon'] === 'search')
-                                <svg class="w-6 h-6 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 110-16 8 8 0 010 16z"/></svg>
-                            @elseif($step['icon'] === 'settings')
-                                <svg class="w-6 h-6 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-1.42 3.42h-.18a1.65 1.65 0 00-1.52 1.01 1.65 1.65 0 00-.18.75V22a2 2 0 01-4 0v-.08a1.65 1.65 0 00-.18-.75 1.65 1.65 0 00-1.52-1.01H9.6a2 2 0 01-1.42-3.42l.06-.06A1.65 1.65 0 008.57 15a1.65 1.65 0 00-1.57-1.15H7a2 2 0 010-4h.08a1.65 1.65 0 001.57-1.15 1.65 1.65 0 00-.33-1.82l-.06-.06A2 2 0 019.6 3.2h.18a1.65 1.65 0 001.52-1.01A1.65 1.65 0 0011.48 1.4V1a2 2 0 014 0v.08c0 .26.06.52.18.75A1.65 1.65 0 0017.38 2.8h.18a2 2 0 011.42 3.42l-.06.06c-.47.47-.6 1.17-.33 1.82.23.58.8.97 1.42.97H22a2 2 0 010 4h-.08c-.62 0-1.19.39-1.42.97z"/></svg>
-                            @else
-                                <svg class="w-6 h-6 text-[#c19b46]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h13l5 5-5 5H3V7z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12h.01"/></svg>
-                            @endif
+{{-- Steps timeline --}}
+<section id="steps" class="relative py-24 md:py-36 bg-white scroll-mt-20">
+    <div class="w-full max-w-[1320px] mx-auto px-5 md:px-8">
+        <div class="relative">
+            {{-- Vertical rail --}}
+            <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2 bg-gradient-to-b from-gold/0 via-gold/40 to-gold/0" aria-hidden="true"></div>
+
+            <div class="space-y-20 md:space-y-28">
+                @foreach($steps as $index => $step)
+                    <div class="relative grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
+                        {{-- Rail node --}}
+                        <div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-ink text-gold-light items-center justify-center font-semibold ring-8 ring-white z-10" aria-hidden="true">
+                            0{{ $index + 1 }}
                         </div>
-                        <span class="font-bold tracking-widest uppercase text-[#c19b46]" style="font-size: 18px;">{{ $step['number'] }}</span>
-                    </div>
 
-                    <h2 class="mb-2 leading-tight font-medium text-[#6d5a2c]" style="font-size: 27px;">{{ $step['title'] }}</h2>
-                    <p class="mb-8 font-medium italic opacity-60 text-[#6d5a2c]" style="font-size: 16.2px;">{{ $step['subtitle'] }}</p>
-
-                    <div class="max-w-[540px]">
-                        <p class="leading-relaxed opacity-90 mb-10 text-[#6d5a2c]" style="font-size: 14.4px;">{{ $step['description'] }}</p>
-                        <a href="{{ route('quote') }}" class="group flex items-center gap-2 px-10 py-4 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-lg hover:shadow-xl bg-[#c19b46]" style="font-size: 14.4px;">
-                            Get Started
-                            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </x-container>
-    </section>
-    @endforeach
-
-    {{-- WHAT MAKES US DIFFERENT (matches React) --}}
-    <section class="py-[140px] bg-[#f7f4eb]">
-        <x-container class="px-8">
-            <div class="animate-on-scroll" data-animate="fadeInUp">
-                <h2 class="text-center mb-16 font-medium text-[#6d5a2c]" style="font-size: 27px;">
-                    What Makes Al Zaha Different
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                @foreach($benefits as $i => $benefit)
-                    <div class="bg-white p-10 rounded-2xl border-t-4 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center animate-on-scroll" data-animate="fadeInUp" data-delay="{{ $i * 0.1 }}" style="border-color: #c19b46;">
-                        <div class="mb-6 p-4 rounded-2xl bg-[#f7f4eb] text-[#c19b46]">
-                            @if($benefit['icon'] === 'shield')
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l7 4v6c0 5-3 9-7 10-4-1-7-5-7-10V6l7-4z"/></svg>
-                            @elseif($benefit['icon'] === 'package')
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 16V8a2 2 0 00-1-1.732l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.732l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.27 6.96L12 12l8.73-5.04"/></svg>
-                            @elseif($benefit['icon'] === 'file-check')
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 3h8l4 4v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>
-                            @else
-                                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            @endif
+                        <div class="{{ $index % 2 !== 0 ? 'lg:order-2' : '' }} animate-on-scroll" data-animate="fadeInUp">
+                            <div class="group relative rounded-[2rem] overflow-hidden shadow-lift aspect-[4/3]">
+                                <img src="{{ $step['image'] }}" alt="{{ $step['title'] }}" class="w-full h-full object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+                            </div>
                         </div>
-                        <h3 class="font-bold mb-4 text-[#6d5a2c]" style="font-size: 18px;">{{ $benefit['title'] }}</h3>
-                        <p class="opacity-70 leading-relaxed text-[#6d5a2c]" style="font-size: 14.4px;">{{ $benefit['description'] }}</p>
+
+                        <div class="animate-on-scroll" data-animate="fadeInUp" data-delay="0.1">
+                            <div class="flex items-center gap-4">
+                                <span class="icon-tile"><x-glyph :name="$step['icon']" class="w-6 h-6" /></span>
+                                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">Step {{ $index + 1 }} of {{ count($steps) }}</span>
+                            </div>
+                            <h2 class="display-2 mt-6">{{ $step['title'] }}</h2>
+                            <p class="mt-4 inline-flex rounded-full bg-cream border border-ink/5 px-4 py-1.5 text-sm font-medium text-ink/70">{{ $step['subtitle'] }}</p>
+                            <p class="lead mt-6 max-w-lg">{{ $step['description'] }}</p>
+                        </div>
                     </div>
                 @endforeach
             </div>
-        </x-container>
-    </section>
+        </div>
+    </div>
+</section>
 
-    {{-- FINAL CTA BAND (matches React) --}}
-    <section class="py-[140px] text-center bg-[#6d5a2c]">
-        <x-container class="px-8">
-            <div class="animate-on-scroll" data-animate="fadeInUp">
-                <h2 class="text-white mb-8 font-medium" style="font-size: 27px;">Ready to Operate With Structured Control?</h2>
-                <p class="text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed" style="font-size: 16.2px;">
-                    Experience a sourcing system designed for operational reliability. Let's discuss your specific project requirements.
-                </p>
-                <div class="flex flex-wrap gap-6 justify-center">
-                    <a href="{{ route('quote') }}" class="px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full shadow-2xl cursor-pointer bg-[#c19b46]" style="font-size: 16.2px;">
-                        Request a Quote
-                    </a>
-                    <a href="{{ route('contact') }}" class="px-12 py-5 text-white font-bold transition-all duration-300 ease-out hover:scale-105 rounded-full border-2 border-[#c19b46] hover:bg-white/5 cursor-pointer" style="font-size: 16.2px;">
-                        Talk to a Coordinator
-                    </a>
+{{-- What makes us different --}}
+<section class="relative isolate overflow-hidden py-24 md:py-36 bg-aurora text-white grain">
+    <div class="absolute inset-0 -z-10 bg-grid opacity-40 [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" aria-hidden="true"></div>
+    <div class="w-full max-w-[1320px] mx-auto px-5 md:px-8">
+        <div class="max-w-2xl mb-14 md:mb-20 animate-on-scroll" data-animate="fadeInUp">
+            <span class="eyebrow eyebrow-light">The difference</span>
+            <h2 class="display-2 mt-5 text-white">What makes <span class="accent accent-light">Al Zaha different.</span></h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            @foreach($benefits as $i => $benefit)
+                <div class="group card-dark p-8 animate-on-scroll" data-animate="fadeInUp" data-delay="{{ $i * 0.08 }}">
+                    <span class="icon-tile icon-tile-dark"><x-glyph :name="$benefit['icon']" class="w-6 h-6" /></span>
+                    <h3 class="mt-8 text-xl font-semibold tracking-tight text-white">{{ $benefit['title'] }}</h3>
+                    <p class="mt-3 text-[0.95rem] leading-relaxed text-white/60">{{ $benefit['description'] }}</p>
                 </div>
-            </div>
-        </x-container>
-    </section>
-</div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<x-cta
+    title='Ready to operate with <span class="accent accent-light">structured control?</span>'
+    text="Experience a sourcing system designed for operational reliability. Let's discuss your specific project requirements."
+    secondary-label="Talk to a Coordinator"
+    :image="asset('images/content/cta2.jpg')"
+/>
 @endsection

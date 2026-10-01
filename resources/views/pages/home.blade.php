@@ -9,6 +9,6 @@
     @include('sections.solutions-preview')
     @include('sections.industries')
     @include('sections.structured-control')
-    @include('sections.cta-band')
     @include('sections.trust-band')
+    @include('sections.cta-band')
 @endsection
